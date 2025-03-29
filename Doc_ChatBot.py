@@ -104,7 +104,7 @@ def handle_question(question):
         st.markdown(response.text)
         add_message(question, response.text)
         #st.experimental_rerun()
-         st.rerun() 
+        st.rerun() 
     except Exception as e:
         st.error(f"Error generating response: {e}")
         st.markdown(str(e))
