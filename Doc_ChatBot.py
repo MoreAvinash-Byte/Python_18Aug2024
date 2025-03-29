@@ -91,7 +91,7 @@ def clear_cache():
 
 def process_file(file):
     """Reads a DOCX file and returns its content."""
-    AlertBox(file)
+    #AlertBox(file)
     doc = Document(file)#("H:\\PDFConDoc\\Federal_Conciliare_User_Manual.docx")
     full_text = []
     for para in doc.paragraphs:
@@ -103,7 +103,8 @@ def handle_question(question):
         response = st.session_state.chat.send_message(question)        
         st.markdown(response.text)
         add_message(question, response.text)
-        st.experimental_rerun() 
+        #st.experimental_rerun()
+         st.rerun() 
     except Exception as e:
         st.error(f"Error generating response: {e}")
         st.markdown(str(e))
