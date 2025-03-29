@@ -1,4 +1,6 @@
 google-generativeai
 streamlit
-docx 
+python-docx
+logging  
+traceback  
 datetime
